@@ -15,6 +15,8 @@ type HomeController (logger : ILogger<HomeController>) =
     inherit Controller()
 
     member this.Index () =
+        Random r = new Random();
+        ViewData["random"] = r.NextDouble();
         this.View()
 
     member this.Privacy () =
